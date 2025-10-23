@@ -1,4 +1,4 @@
-export default function Collection({...jolli}) {
+export default function Collection({jolli}) {
     return(
         <div className="collection-container">
             <div className="trophy">

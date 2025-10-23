@@ -14,7 +14,7 @@ function App() {
 
   function handlePurchase() {
     if (count>trophies.at(progress+1).price) {
-      setCount(count);
+      setCount(0);
       userTrophies.push(trophies.at(progress));
       setProgress((progress) => progress+1);
     }
@@ -57,7 +57,7 @@ function App() {
           <h1>Next trophy at: {trophies.at(progress+1).price}</h1>
         </div>
       </div>
-      <Collection jolli={trophies.at({progress})} />
+      <Collection jolli={trophies[progress]} />
       <img src='https://vectorflags.s3.amazonaws.com/flags/ph-circle-01.png' draggable={false} height={300} width={300} onClick={() => setCount((count) => count + 1)}></img>
     </>
   )
